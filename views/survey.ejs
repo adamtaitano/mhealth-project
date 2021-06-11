@@ -1,6 +1,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <h1>Daily Activity Survey</h1>
 <h4>Ecological Momentary Assessment (EMA): this survey includes assessment, confirmation, and goal-setting for activity.</h4>
 <p>Optional questions to address quality of sleep, and weighing behaviors.</p>
@@ -9,7 +10,8 @@
 
 <form action="/survey" method="POST">
   <fieldset>
-    <legend><label>Assessment: How do you feel about your activity yesterday?<abbr title="required">*</label></legend>
+    <legend>equired fields are followed by <strong><abbr title="required">*</abbr></strong>.</legend>
+    <label for="assess">Assessment: How do you feel about your activity yesterday?<abbr title="required">*</label>
     <p>
       <input type="radio" name="assess" id="q1" value="2" required="required">
       <label for="q1">I am satisfied with my activity.</label>
@@ -24,7 +26,7 @@
     </p>
   </fieldset>
   <fieldset>
-    <legend><label>Confirmation: Please review your activity data, then confirm your progress.<abbr title="required">*</label></legend>
+    <label for="confirm">Confirmation: Please review your activity data, then confirm your progress.<abbr title="required">*</label>
     <p>
       <input type="radio" name="confirm" id="q1" value="2" required="required">
       <label for="q1">Yesterday I was more active than the day before.</label>
@@ -39,7 +41,7 @@
     </p>
   </fieldset>
   <fieldset>
-    <legend><label>Goal-Setting: Today, I plan to...<abbr title="required">*</label></legend>
+    <<label for="goal">Goal-Setting: Today, I plan to...<abbr title="required">*</label>
     <p>
       <input type="radio" name="goal" id="q1" value="2" required="required">
       <label for="q1">Be more active than yesterday</label>
@@ -54,7 +56,7 @@
     </p>
   </fieldset>
   <fieldset>
-    <legend><label>How would you describe your sleep from last night?</label></legend>
+    <label for="sleep">How would you describe your sleep from last night?</label>
     <p>
       <input type="radio" name="sleep" id="q1" value="2">
       <label for="q1">I got a satisfying amount of sleep.</label>
@@ -69,7 +71,7 @@
     </p>
   </fieldset>
   <fieldset>
-    <legend><label>Do you feel like weighing yourself today?</label></legend>
+    <label for="weigh">Do you feel like weighing yourself today?</label>
     <p>
       <input type="radio" name="weigh" id="q1" value="2">
       <label for="q1">Yes, I feel like weighing myself.</label>
