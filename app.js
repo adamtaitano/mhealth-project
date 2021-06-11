@@ -33,7 +33,7 @@ var userid = null;
 passport.use(new FitbitStrategy({
     clientID: process.env['FITBIT_CONSUMER_KEY'],
     clientSecret: process.env['FITBIT_CONSUMER_SECRET'],
-    callbackURL: "http://127.0.0.1:3000/auth/fitbit/callback",
+    callbackURL: "https://blooming-sands-88868.herokuapp.com/auth/fitbit/callback",
   },
   function(accessToken, refreshToken, profile, done) {
     {
