@@ -1,6 +1,9 @@
 {
   "name": "mHealth-Final-Project",
   "version": "0.0.0",
+  "engines": {
+    "node": "14.x"
+  }
   "description": "Fitbit Web App, based on an existing template: Express 4.x app using Passport for authentication with Twitter.",
   "keywords": [
     "project",
