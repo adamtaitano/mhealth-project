@@ -154,13 +154,6 @@ app.use(passport.session({
     saveUninitialized: true
 }));
 
-
-// Define routes.
-  // app.get('/',
-  //   function(req, res) {
-  //     res.render('home', { user: req.user });
-  //   });
-
 //login page
 app.get('/login',
   function(req, res){
