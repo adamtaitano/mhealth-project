@@ -287,10 +287,10 @@ app.post('/survey', function (req, res) {
           const entries = array['entries'];
           const info = JSON.stringify(array[0]);
           let values = {};
-          values.generic = ['Neutral','Positive','Negative'];
-          values.assess = ['I feel okay about my activity.','I am satisfied with my activity.','I am not satisfied with my activity.'];
-          values.confirm = ['Yesterday I was about as active as the day before.', 'Yesterday I was more active than the day before.','Yesterday I was less active than the day before.'];
-          values.goal = ['Be about as active as yesterday.','Be more active than yesterday','Be less active about yesterday.'];
+          values.generic = ['Negative','Neutral','Positive',];
+          values.assess = ['I am not satisfied with my activity.','I feel okay about my activity.','I am satisfied with my activity.'];
+          values.confirm = ['Yesterday I was less active than the day before.','Yesterday I was about as active as the day before.', 'Yesterday I was more active than the day before.'];
+          values.goal = ['Be less active about yesterday.','Be about as active as yesterday.','Be more active than yesterday'];
           // const info = JSON.parse(result);
           res.render('entries', { entries: entries, user: req.user, values: values });
           // console.log(array['entries']);
