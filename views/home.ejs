@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<% if (!user) { %>
+  <p>Welcome! Please <a href="/login">log in with fitbit</a> to begin.</p>
+  <p>This is a demonstration for a final Project on mobile health appplications</p>
+  <p>To make full use of this website, you need to have or use a Fitbit account</p>
+  <p>You can also create a new account at: <a href=https://www.fitbit.com/signup</a></p>
+<% } else { %>
+  <p>Hello, <%= user.displayName %>.</p>
+  <p>View your <a href="/profile">profile</a>, <a href="/steps">steps</a>, <a href="/survey">take a survey</a>, view your <a href="/entries"> past entries</a>, or <a href="/logout">logout</a>.</p>
+<% } %>

@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<p>View your <a href="/steps">steps</a>, <a href="/survey">take a survey</a>, review your <a href="/entries"> past entries</a>, or <a href="/logout">logout</a>.</p>
+<p>
+  <img src="<%= user._json.user.avatar150 %>" alt="Avatar Photo"><br/>
+  Avatar Photo<br/>
+  Full Name: <%= user._json.user.fullName %><br/>
+  Age: <%= user._json.user.age %><br/>
+  ID: <%= user.id %><br/>
+  <img src="<%= user._json.user.topBadges[0].image125px %>" alt="Top Badge"><br/>
+  Top Badge: <%= user._json.user.topBadges[0].description %>
+</p>

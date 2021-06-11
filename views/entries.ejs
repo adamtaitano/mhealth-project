@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<% if (!user) { %>
+  <p>If you would like to use this app, Please <a href="/login">log in with fitbit</a> to begin.</p>
+<% } else { %>
+  <p>View your <a href="/profile">profile</a>, <a href="/steps">steps</a>, <a href="/survey">take a survey</a>, or <a href="/logout">logout</a>.</p>
+  <p>Hello, <%= user.displayName %>. Here are your most recent survey entries:</p>
+  <ul>
+  <!-- inserts each form response, most recent first, from MongoDB to list -->
+  <% entries.slice().reverse().forEach(entry => { %>
+    <ul>
+      <li><%= `Date Submitted: ${entry.creationDate}` %></li>
+      <li><%= `Assessment Response: ${values.assess[entry.assess]}` %></li>
+      <li><%= `Confirmation Response: ${values.confirm[entry.confirm]}` %></li>
+      <li><%= `Goal-Setting Response: ${values.goal[entry.goal]}` %></li>
+      <li><%= `Sleep Response: ${values.generic[entry.sleep]}` %></li>
+      <li><%= `Weighing Response: ${values.generic[entry.weigh]}` %></li>
+    </ul>
+    <br>
+  <% }); %>
+  </ul>
+<% } %>

@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<% if (!user) { %>
+  <p>Sorry, you have not been authenticated. Please <a href="/login">log in with fitbit</a> to try again.</p>
+<% } else { %>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["linechart"]});
+      google.setOnLoadCallback(drawChart);
+      console.log(<%-JSON.stringify(array)%>);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable(<%-JSON.stringify(array)%>);
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, {width: 500, height: 300, legend: 'bottom', title: 'This Month`s Daily Step Count'});
+      }
+    </script>
+  </head>
+  <body>
+    <p>View your <a href="/profile">profile</a>, <a href="/survey">take a survey</a>, review your <a href="/entries"> past entries</a>, or <a href="/logout">logout</a>.</p>
+    <p>Hello, <%= user.displayName %>! Here is your activity data:
+    <P>Yesterday's Daily Change: <%= ydc %>%
+    <div style="display:none">
+      <p><%= array %>
+    </div>
+    <div id="chart_div"></div>
+  </body>
+<% } %>

@@ -1,0 +1,41 @@
+{
+  "name": "mHealth Final Project",
+  "version": "0.0.0",
+  "description": "Fitbit Web App, based on an existing template: Express 4.x app using Passport for authentication with Twitter.",
+  "keywords": [
+    "project",
+    "express",
+    "passport"
+  ],
+  "author": "Adam Taitano",
+  "license": "Unlicense",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^5.0.1",
+    "chart.js": "^3.3.2",
+    "connect-ensure-login": "^0.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.6.0",
+    "ejs": "^2.6.2",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "express-session": "^1.16.1",
+    "jquery": "^3.6.0",
+    "mongodb": "^3.6.9",
+    "mongoose": "^5.0.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.0",
+    "passport-fitbit": "^1.0.4",
+    "passport-fitbit-oauth2": "^1.0.2",
+    "unirest": "^0.6.0"
+  }
+}
